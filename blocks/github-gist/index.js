@@ -12,6 +12,12 @@
 		// Remove to make block editable in HTML mode.
 		supportHTML: false,
 
+		attributes: {
+			url: {
+				type: 'string',
+			}
+		},
+
 		edit: function( props ) {
 			var url = props.attributes.url || '',
 				focus = props.focus;
