@@ -11,3 +11,27 @@
  *
  * @package         Github_Gist_Gutenberg_Block
  */
+
+/**
+ * Register the GitHub Gist shortcode
+ */
+function gggb_init() {
+	add_shortcode( 'github-gist', 'gggb_render_shortcode' );
+}
+add_action( 'init', 'gggb_init' );
+
+/**
+ * Render the GitHub Gist shortcode
+ *
+ * @param array $atts Shortcode attributes.
+ */
+function gggb_render_shortcode( $atts ) {
+	if ( empty( $atts['url'] )
+		|| 'gist.github.com' !== parse_url( $atts['url'], PHP_URL_HOST ) ) {
+		return '';
+	}
+	return sprintf(
+		'<script src="%s"></script>',
+		esc_url( rtrim( $atts['url'], '/' ) . '.js' )
+	);
+}
