@@ -12,6 +12,8 @@
  * @package         Github_Gist_Gutenberg_Block
  */
 
+require_once __DIR__ . '/blocks/github-gist.php';
+
 /**
  * Register the GitHub Gist shortcode
  */
