@@ -21,13 +21,19 @@
 		edit: function( props ) {
 			var url = props.attributes.url || '',
 				focus = props.focus;
+			// retval is our return value for the callback.
 			var retval = [];
+			// When the block is focus or there's no URL value,
+			// show the text input control so the user can enter a URL.
 			if ( !! focus || ! url.length ) {
+				// Instantiate a TextControl element
 				retval.push(
 					el(
 						InspectorControls.TextControl,
 						{
 							value: url,
+							// When the value is changed, we need to
+							// update the property
 							onChange: function( newVal ) {
 								props.setAttributes({
 									url: newVal
@@ -39,14 +45,22 @@
 				);
 			}
 			if ( url.length ) {
-				retval.push(
-					el(
-						'script',
-						{
-							src: url.trim(/\/$/) + '.js',
-						}
-					),
-				);
+				// Because Gutenberg doesn't render inline JS,
+				// we need to fetch the assets and update the div.
+				var id = 'gist-' + props.id;
+				setTimeout(function(){
+					jQuery.getJSON( url.trim(/\/$/) + '.json?callback=?', function(data){
+						var div = jQuery('#'+id);
+						div.html('');
+						var stylesheet = jQuery('<link />');
+						stylesheet.attr('ref', 'stylesheet');
+						stylesheet.attr('href', data.stylesheet);
+						stylesheet.attr('type', 'text/css');
+						div.append(stylesheet);
+						div.append(data.div);
+					});
+				}, 10 );
+				retval.push( el( 'div', { id: id } ) );
 			}
 			return retval;
 		},
