@@ -43,6 +43,7 @@
 					placeholder: __( 'Enter a GitHub Gist URL' ),
 				};
 				retval.push(
+					// el() is a function to instantiate a new element.
 					el( InspectorControls.TextControl, controlOptions )
 				);
 			}
