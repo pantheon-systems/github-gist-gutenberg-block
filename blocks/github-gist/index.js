@@ -31,7 +31,7 @@
 			if ( !! focus || ! url.length ) {
 				// Instantiate a TextControl element
 				var controlOptions = {
-					// Existing 'url' value.
+					// Existing 'url' value for the block.
 					value: url,
 					// When the text input value is changed, we need to
 					// update the 'url' attribute to propagate the change.
@@ -49,10 +49,10 @@
 			}
 			// Only add preview UI when there's a URL entered.
 			if ( url.length ) {
-				// Because Gutenberg doesn't render inline JS,
-				// we need to fetch the assets from GitHub and update the div.
 				var id = 'gist-' + props.id;
-				// setTimeout is used to wait until after render
+				// setTimeout is used to delay the GitHub JSON API request
+				// until after the block is initially rendered. From the response,
+				// we update the rendered div.
 				setTimeout(function(){
 					jQuery.getJSON( url.trim(/\/$/) + '.json?callback=?',
 						function(data){
@@ -82,7 +82,7 @@
 				return null;
 			}
 			// Include a fallback link for non-JS contexts
-			// and for when the plugin is activated.
+			// and for when the plugin is not activated.
 			return el( 'a', { href: url }, __( 'View Gist on GitHub' ) );
 		}
 	} );
