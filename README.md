@@ -7,7 +7,7 @@
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
-Include GitHub Gists in your Gutenberg posts without the hassle.
+Include GitHub Gists in your Gutenberg posts without the hassle of shortcodes.
 
 ## Description ##
 
