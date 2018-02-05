@@ -1,15 +1,15 @@
-=== Gist Block by Pantheon ===
-Contributors: getpantheon, danielbachhuber
-Tags: github gist, gutenberg
-Requires at least: 4.4
-Tested up to: 4.9.2
-Stable tag: 0.1.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# Gist Block by Pantheon #
+**Contributors:** getpantheon, danielbachhuber  
+**Tags:** github gist, gutenberg  
+**Requires at least:** 4.4  
+**Tested up to:** 4.9.2  
+**Stable tag:** 0.1.0  
+**License:** GPLv2 or later  
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
 Include GitHub Gists in your Gutenberg posts without the hassle.
 
-== Description ==
+## Description ##
 
 The Gist Block by Pantheon makes it possible to embed GitHub Gists in your Gutenberg posts. Simply add the "GitHub Gist" block, paste the URL to your Gist, and see it transform to a wonderful preview.
 
@@ -23,11 +23,11 @@ Read "[How to Convert a Shortcode to a Gutenberg Block](https://pantheon.io/blog
 
 Something we can clarify? [Check out the project on GitHub](https://github.com/pantheon-systems/github-gist-gutenberg-block/) for any questions, feedback, suggestions, or pull requests.
 
-== Installation ==
+## Installation ##
 
 The Gist Block can be installed just like any other WordPress plugin!
 
-== Changelog ==
+## Changelog ##
 
-= 0.1.0 (Feb. 5th, 2018) =
+### 0.1.0 (Feb. 5th, 2018) ###
 * Initial release.

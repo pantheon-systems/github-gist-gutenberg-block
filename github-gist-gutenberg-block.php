@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     GitHub Gist Gutenberg Block
+ * Plugin Name:     Gist Block by Pantheon
  * Plugin URI:      https://pantheon.io
  * Description:     Render GitHub gists
  * Author:          Pantheon
