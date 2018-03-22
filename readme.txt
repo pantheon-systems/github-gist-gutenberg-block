@@ -3,7 +3,7 @@ Contributors: getpantheon, danielbachhuber
 Tags: github gist, gutenberg
 Requires at least: 4.4
 Tested up to: 4.9.2
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,10 @@ Something we can clarify? [Check out the project on GitHub](https://github.com/p
 The Gist Block can be installed just like any other WordPress plugin!
 
 == Changelog ==
+
+= 0.1.1 (Mar. 22nd, 2018) =
+* Uses new `wp.components` API included in Gutenberg 2.4.
+* Removes textdomain because it's not registered.
 
 = 0.1.0 (Feb. 5th, 2018) =
 * Initial release.
