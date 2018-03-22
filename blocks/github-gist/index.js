@@ -1,11 +1,11 @@
 ( function( wp ) {
 	var el = wp.element.createElement;
 	var __ = wp.i18n.__;
-	var InspectorControls = wp.blocks.InspectorControls;
+	var Components = wp.components;
 
 	// Visit https://wordpress.org/gutenberg/handbook/block-api/ to learn about Block API
 	wp.blocks.registerBlockType( 'github-gist-gutenberg-block/github-gist', {
-		title: __( 'Github Gist', 'github-gist-gutenberg-block' ),
+		title: __( 'Github Gist' ),
 
 		category: 'widgets',
 
@@ -44,7 +44,7 @@
 				};
 				retval.push(
 					// el() is a function to instantiate a new element.
-					el( InspectorControls.TextControl, controlOptions )
+					el( Components.TextControl, controlOptions )
 				);
 			}
 			// Only add preview UI when there's a URL entered.

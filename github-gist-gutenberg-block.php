@@ -6,7 +6,7 @@
  * Author URI:      https://pantheon.io
  * Text Domain:     github-gist-gutenberg-block
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.1.1
  *
  * @package         Github_Gist_Gutenberg_Block
  */
