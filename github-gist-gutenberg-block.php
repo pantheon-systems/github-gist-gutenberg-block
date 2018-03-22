@@ -18,9 +18,11 @@ require_once __DIR__ . '/blocks/github-gist.php';
  */
 function gggb_init() {
 	add_shortcode( 'github-gist', 'gggb_render_shortcode' );
-	register_block_type( 'github-gist-gutenberg-block/github-gist', array(
-		'render_callback' => 'gggb_render_shortcode',
-	) );
+	if ( function_exists( 'register_block_type' ) ) {
+		register_block_type( 'github-gist-gutenberg-block/github-gist', array(
+			'render_callback' => 'gggb_render_shortcode',
+		) );
+	}
 }
 add_action( 'init', 'gggb_init' );
 
