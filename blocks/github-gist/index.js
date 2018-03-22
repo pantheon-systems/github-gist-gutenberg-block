@@ -5,7 +5,7 @@
 
 	// Visit https://wordpress.org/gutenberg/handbook/block-api/ to learn about Block API
 	wp.blocks.registerBlockType( 'github-gist-gutenberg-block/github-gist', {
-		title: __( 'Github Gist', 'github-gist-gutenberg-block' ),
+		title: __( 'Github Gist' ),
 
 		category: 'widgets',
 
