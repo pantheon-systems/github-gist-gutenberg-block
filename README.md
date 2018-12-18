@@ -10,6 +10,7 @@
 Include GitHub Gists in your Gutenberg posts without the hassle of shortcodes.
 
 ## Description ##
+This plugin was written as a code sample for the blog article [How To Convert Shortcodes To Gutenberg Blocks](https://pantheon.io/blog/how-convert-shortcode-gutenberg-block) in January 2018 and is not maintained.
 
 The Gist Block by Pantheon makes it possible to embed GitHub Gists in your Gutenberg posts. Simply add the "GitHub Gist" block, paste the URL to your Gist, and see it transform to a wonderful preview.
 
